@@ -16,7 +16,7 @@ popularity of songs by artists/albums for example.
 
 The pipeline is represented by the following diagram:
 
-![Alt Text](diagrams/pipeline_diagram.pdf)
+![Alt Text](diagrams/pipeline_diagram.png)
 
 Orchestration: 
     The first lambda function is scheduled by cloudwatch to run at 3:40AM (UTC+02:00), the second is automatically triggered by an object being placed in the S3 bucket.
@@ -30,7 +30,7 @@ Lambda Functions:
 
 The dimensional model in the Snowflake dwh is represented by the diagram below:
 
-![Alt Text](diagrams/dwh_diagram.pdf)
+![Alt Text](diagrams/dwh_diagram.png)
 
 The model is a classical Kimbal star schema with a transaction fact table where the grain is the placement of a given track on a given day. The album and song dimensions are self-explanatory, however the artist 
 
