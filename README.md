@@ -19,12 +19,14 @@ The pipeline is represented by the following diagram:
 ![Alt Text](diagrams/pipeline_diagram.png)
 
 Orchestration: 
-    The first lambda function is scheduled by cloudwatch to run at 3:40AM (UTC+02:00), the second is automatically triggered by an object being placed in the S3 bucket.
-    Snowpipes are set-up to pull data to staging tables in the snowflake dwh. The series of tasks carrying out the ETL process is scheduled to run at 3:50AM (UTC+02:00).
-    The automatic PowerBI refresh is scheduled to run at 4:00 AM (UTC+02:00).
+    
+The first lambda function is scheduled by cloudwatch to run at 3:40AM (UTC+02:00), the second is automatically triggered by an object being placed in the S3 bucket.
+Snowpipes are set-up to pull data to staging tables in the snowflake dwh. The series of tasks carrying out the ETL process is scheduled to run at 3:50AM (UTC+02:00).
+The automatic PowerBI refresh is scheduled to run at 4:00 AM (UTC+02:00).
 
 Lambda Functions:
-    Both lambda functions are simple python scripts utilizing pandas to extract relevant information from the API response which is a JSON file. These functions are included in a separate folder in this repository.
+
+Both lambda functions are simple python scripts utilizing pandas to extract relevant information from the API response which is a JSON file. These functions are included in a separate folder in this repository.
 
 ### DWH Description
 
